@@ -1,3 +1,47 @@
 body {
   background-color: #f8f9fa;
 }
+
+.certificado {
+  width: 297mm;
+  min-height: 210mm;
+  padding: 30mm;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .certificado,
+  .certificado * {
+    visibility: visible;
+  }
+  .certificado {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.assinaturas {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  padding: 0 40px;
+}
+
+.assinaturas div {
+  border-top: 1px solid #000;
+  width: 45%;
+  text-align: center;
+  padding-top: 5px;
+  font-style: italic;
+}
+
+.certificado strong {
+  font-size: 1.2rem;
+}

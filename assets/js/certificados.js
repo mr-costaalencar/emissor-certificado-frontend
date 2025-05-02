@@ -1,7 +1,7 @@
 const alunoSelect = document.getElementById("alunoSelect");
 const cursoSelect = document.getElementById("cursoSelect");
 const certificadoForm = document.getElementById("certificadoForm");
-const certificadoInfo = document.getElementById("certificadoInfo");
+const certificadoGerado = document.getElementById("certificadoGerado");
 
 async function loadAlunosCursos() {
   const alunos = await apiFetch("/alunos");
@@ -33,8 +33,32 @@ certificadoForm.addEventListener("submit", async function (e) {
     body: JSON.stringify(payload),
   });
 
-  certificadoInfo.classList.remove("d-none");
-  certificadoInfo.innerHTML = `<strong>Certificado Emitido:</strong><br>Aluno: ${data.nomeAluno}<br>Curso: ${data.nomeCurso}<br>Carga Horária: ${data.cargaHoraria}h<br>Código de Autenticação: <code>${data.autenticacao}</code>`;
+  certificadoGerado.classList.remove("d-none");
+  certificadoGerado.innerHTML = `
+      <h1 style="font-size: 2.5rem; font-weight: bold;">Certificado</h1>
+      <p class="text-uppercase mb-4" style="letter-spacing: 1px;">de conclusão de curso</p>
+      <p style="font-size: 1.2rem;">Certificamos que <strong>${
+        data.nomeAluno
+      }</strong> concluiu com êxito o curso de <strong>${
+    data.nomeCurso
+  }</strong> com carga horária de <strong>${
+    data.cargaHoraria
+  } horas</strong>, realizado em <strong>${new Date().toLocaleDateString(
+    "pt-BR"
+  )}</strong>.</p>
+      <div class="assinaturas">
+        <div>Assinatura do Professor</div>
+        <div>Assinatura da Coordenação</div>
+      </div>
+      <div class="mt-4">
+        <a href="validacao.html?codigo=${
+          data.autenticacao
+        }" target="_blank">Código de validação: <code>${
+    data.autenticacao
+  }</code></a>
+      </div>
+    `;
+  mostrarBotoesCertificado();
 });
 
 document.addEventListener("DOMContentLoaded", loadAlunosCursos);
