@@ -1,6 +1,6 @@
 # Emissor de Certificados - Frontend
 
-Este projeto é o frontend de uma aplicação para emissão e validação de certificados de cursos de extensão, desenvolvido como parte do Projeto Integrador 2025.1.ADS.3P.NOITE.
+Este projeto é o frontend de uma aplicação para emissão e validação de certificados de cursos de extensão, desenvolvido como parte do Projeto Integrador.
 
 ## 📌 Tecnologias Utilizadas
 - HTML5
