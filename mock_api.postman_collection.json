@@ -1,0 +1,1824 @@
+{
+	"info": {
+		"_postman_id": "0b8cd2fc-1236-433f-9ba6-263e987c3b37",
+		"name": "Emissor de Certificados API",
+		"description": "Mock da API backend para o projeto de Emissor de Certificados.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3394526",
+		"_collection_link": "https://rcadevbr.postman.co/workspace/R3-Software-Ltda.~c00f6e2c-16cc-417a-9e2f-0fb5f8605546/collection/3394526-0b8cd2fc-1236-433f-9ba6-263e987c3b37?action=share&source=collection_link&creator=3394526"
+	},
+	"item": [
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "Aluno - Cadastrar",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"João da Silva\",\n    \"cpf\": \"12937436072\",\n    \"email\": \"joao@gmail.com\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/alunos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Alunos - Cadastrar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer "
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"João da Silva\",\n    \"cpf\": \"12345678900\",\n    \"email\": \"joao@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/alunos",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"alunos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:02:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=f0f2a365b4f6d65d"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=26d5e88483566fc4"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "118"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745449370"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1, \n    \"nome\": \"João da Silva\",\n    \"cpf\": \"12937436072\",\n    \"email\": \"joao@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Aluno - Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/alunos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Alunos - Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/alunos",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"alunos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:00:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=9569741a7f1af847"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=80805b7ff93de928"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745449300"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-iQ/6cTHOHhQG6g/jbUGqClHk7Zg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"João da Silva\",\n        \"cpf\": \"12937436072\",\n        \"email\": \"joao@gmail.com\"\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Maria da Silva\",\n        \"cpf\": \"19008613050\",\n        \"email\": \"maria@gmail.com\"\n    },\n    {\n        \"id\": 3,\n        \"nome\": \"José da Silva\",\n        \"cpf\": \"46070345096\",\n        \"email\": \"jose@gmail.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Aluno - Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João da Silva e Silva\",\r\n    \"cpf\": \"12937436072\",\r\n    \"email\": \"joao@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/alunos/{{id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"alunos",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aluno - Atualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"João da Silva e Silva\",\r\n    \"cpf\": \"12345678900\",\r\n    \"email\": \"joao@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/alunos/{{id}}",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"alunos",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:27:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=9f9c02c382eaa5cb"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=ecce15bf213ac6a1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745450898"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"João da Silva e Silva\",\n    \"cpf\": \"12937436072\",\n    \"email\": \"joao@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Aluno - Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/alunos/{{id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"alunos",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Aluno - Deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/alunos/{{id}}",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"alunos",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:31:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=86ec311f1ee376b8"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=74447c88eb0d99b2"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Curso - Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Introdução ao Git\",\n    \"descricao\": \"Curso de fundamentos de controle de versão\",\n    \"cargaHoraria\": 20\n}"
+						},
+						"url": {
+							"raw": "{{server}}/cursos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Curso - Cadastrar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"Introdução ao Git\",\n    \"descricao\": \"Curso de fundamentos de controle de versão\",\n    \"cargaHoraria\": 20\n}"
+								},
+								"url": {
+									"raw": "{{server}}/cursos",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"cursos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:31:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=e38a0413516fc2ca"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=a7d8bf817ce62949"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "116"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Introdução ao Git\",\n    \"descricao\": \"Curso de fundamentos de controle de versão\",\n    \"cargaHoraria\": 20\n}"
+						}
+					]
+				},
+				{
+					"name": "Curso - Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/cursos",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Curso - Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}/cursos",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"cursos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:46:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=47d4c01da889f510"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=ebf56c942d96a597"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "115"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745452014"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nome\": \"Introdução ao Git\",\n        \"descricao\": \"Curso de fundamentos de controle de versão\",\n        \"cargaHoraria\": 20\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"Introdução ao JavaScript\",\n        \"descricao\": \"Curso de fundamentos de Progamação Orientado a Objeto\",\n        \"cargaHoraria\": 20\n    },\n    {\n        \"id\": 3,\n        \"nome\": \"Introdução ao React\",\n        \"descricao\": \"Curso de fundamentos de desenvolvimento com o React\",\n        \"cargaHoraria\": 20\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Curso - Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Introdução ao GitHub\",\r\n    \"descricao\": \"Curso de fundamentos de controle de versão\",\r\n    \"cargaHoraria\": 40\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/cursos/{{id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cursos",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Curso - Atualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Introdução ao GitHub\",\r\n    \"descricao\": \"Curso de fundamentos de controle de versão\",\r\n    \"cargaHoraria\": 40\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/cursos/{{id}}",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"cursos",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:48:35 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=4373869506f26ac0"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=abc717ad55d1fa2d"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "118"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745452133"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"nome\": \"Introdução ao GitHub\",\n    \"descricao\": \"Curso de fundamentos de controle de versão\",\n    \"cargaHoraria\": 40\n}"
+						}
+					]
+				},
+				{
+					"name": "Curso - Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/cursos/{{id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"cursos",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Curso - Deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/cursos/{{id}}",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"cursos",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:49:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=df5c77a779f5e306"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=13064407d64cefd4"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "118"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745452218"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Auth - Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@escola.com\",\n    \"senha\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{server}}/auth/login",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Auth - Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@escola.com\",\n    \"senha\": \"123456\"\n}"
+								},
+								"url": {
+									"raw": "{{server}}/auth/login",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:32:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=f0fb17f100953484"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=b4ab10406bac9540"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451214"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"jwt_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Usuário - Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@escola.com\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Usuário - Cadastrar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@escola.com\",\r\n    \"senha\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/users",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:35:22 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=b5d7ab384ed3333b"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=57a3ecd55b6a36b1"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451382"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"admin@escola.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Usuário - Listar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/users",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Usuário - Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{server}}/users",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:36:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=38851f58ed90e878"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=d47495be44e1ed74"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "117"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451382"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"email\": \"admin@escola.com\"\n    },\n    {\n        \"id\": 2,\n        \"email\": \"coord@escola.com\"\n    },\n    {\n        \"id\": 3,\n        \"email\": \"diretoria@escola.com\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Usuário - Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@esuda.edu.br\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/users/{{id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Usuário - Atualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@esuda.edu.br\",\r\n    \"senha\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server}}/users/{{id}}",
+									"host": [
+										"{{server}}"
+									],
+									"path": [
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:44:48 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=69a0f2dbd0f67aca"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=495348c3046b3ea0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451948"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"email\": \"admin@esuda.edu.br\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Usuário - Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/users/{{id}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"users",
+								"{{id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Usuário - Deletar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer ",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/users/{{id}}",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"users",
+										"{{id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:51:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=a6f3660930d2246e"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=ff98148f09adafc0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745452341"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Certificados",
+			"item": [
+				{
+					"name": "Certificado - Emissão",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"alunoId\": {{id}},\n    \"cursoId\": {{id}}\n}"
+						},
+						"url": {
+							"raw": "{{server}}/certificados",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"certificados"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Certificados - Emissão",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer "
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"alunoId\": 1,\n    \"cursoId\": 1\n}"
+								},
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/certificados",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"certificados"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:38:20 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=8a926803a511494e"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=c019e03784b13911"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "118"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745451535"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nomeAluno\": \"João da Silva\",\n    \"nomeCurso\": \"Introdução ao Git\",\n    \"cargaHoraria\": 20,\n    \"autenticacao\": \"LfI7rsZXCk\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Certificados - Validação Pública",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{server}}/certificado/{{autenticacao}}",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"certificado",
+								"{{autenticacao}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Certificados - Validação Pública",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io/certificados/{{autenticacao}}",
+									"protocol": "https",
+									"host": [
+										"6c3f0173-e123-4f5b-873f-b345307e36c4",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"certificados",
+										"{{autenticacao}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 23 Apr 2025 23:52:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "x-srv-trace",
+									"value": "v=1;t=a63b18307c9b6dfc"
+								},
+								{
+									"key": "x-srv-span",
+									"value": "v=1;s=bc61d948041fa7bb"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "120"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "119"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1745452401"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-HBiIyJWUHUWX/oPT7Emp7x0Nxms\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nomeAluno\": \"João da Silva\",\n    \"nomeCurso\": \"Introdução ao Git\",\n    \"cargaHoraria\": 20,\n    \"autenticacao\": \"LfI7rsZXCk\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "jwt",
+		"jwt": [
+			{
+				"key": "isSecretBase64Encoded",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "secret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "algorithm",
+				"value": "HS256",
+				"type": "string"
+			},
+			{
+				"key": "payload",
+				"value": "{}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "queryParamKey",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "header",
+				"value": "{}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "gC3E0kQvDrS3ijFCsxsZaQ6CAGtomzHwbVYFaezAysvg0FOPi68Wzhlt3pvCSq0W"
+		},
+		{
+			"key": "server",
+			"value": "https://6c3f0173-e123-4f5b-873f-b345307e36c4.mock.pstmn.io",
+			"type": "string"
+		},
+		{
+			"key": "id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "autenticacao",
+			"value": "LfI7rsZXCk",
+			"type": "default"
+		}
+	]
+}
